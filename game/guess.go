@@ -8,6 +8,7 @@ import (
 
 const max = 10
 
+// ValidNumber : checks if string number is valid i.e not empty, not greater than max and its actually a number
 func ValidNumber(num string) (int, error) {
 	if len(num) == 0 {
 		return -1, errors.New("Number cannot be empty")
@@ -15,7 +16,7 @@ func ValidNumber(num string) (int, error) {
 
 	result, err := strconv.Atoi(num)
 	if err != nil {
-		return -1, errors.New(err.Error())
+		return -1, errors.New("Not a number")
 	}
 
 	if result > max {
@@ -23,4 +24,16 @@ func ValidNumber(num string) (int, error) {
 	}
 
 	return result, nil
+}
+
+//NumberRange : checks range of value against guess
+func NumberRange(value, guess int) string {
+	diff := guess - value
+	if diff < 0 {
+		return "Too Low"
+	} else if diff > 0 {
+		return "Too high"
+	} else {
+		return "Correct"
+	}
 }
