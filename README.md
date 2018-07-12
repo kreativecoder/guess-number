@@ -8,5 +8,9 @@ Things I hope to learn from the project:
 
 * Input/Output
 * Math Random
+* Loops
+* Table test cases
+* Functions
+* Pointers (Still confusing, coming from Java world :))
 
 With inspiration from [KnightLab](https://knightlab.northwestern.edu/2014/06/05/five-mini-programming-projects-for-the-python-beginner/)
